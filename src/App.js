@@ -1,7 +1,15 @@
+import backgroundPattern from '../public/assets/images/background-pattern-desktop.svg';
+
 export default function App() {
   return (
-    <div>
-      <h1 className="">FAQ ACCORDION</h1>
+    <div className="">
+      <div>
+        <img src={backgroundPattern} alt="background pattern" />
+      </div>
+      <div>LIGHT PURPLE</div>
+      <Faq/>
     </div>
   );
 }
+
+function Faq() {}
