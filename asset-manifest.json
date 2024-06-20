@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Faq-Accordion-React/static/css/main.f78b2798.css",
+    "main.js": "/Faq-Accordion-React/static/js/main.84ef4248.js",
+    "static/media/background-pattern-desktop.svg": "/Faq-Accordion-React/static/media/background-pattern-desktop.621478cf83f8150af604.svg",
+    "index.html": "/Faq-Accordion-React/index.html",
+    "static/media/icon-star.svg": "/Faq-Accordion-React/static/media/icon-star.189fd38b8aefdc8fbe0d4008b1ff497e.svg",
+    "static/media/icon-plus.svg": "/Faq-Accordion-React/static/media/icon-plus.6c5381bcc9a768ea5c3683e11c6bfd6c.svg",
+    "static/media/icon-minus.svg": "/Faq-Accordion-React/static/media/icon-minus.5575b6de09a1e0deab1dd585ada35f31.svg",
+    "main.f78b2798.css.map": "/Faq-Accordion-React/static/css/main.f78b2798.css.map",
+    "main.84ef4248.js.map": "/Faq-Accordion-React/static/js/main.84ef4248.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f78b2798.css",
+    "static/js/main.84ef4248.js"
+  ]
+}
