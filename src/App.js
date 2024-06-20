@@ -21,7 +21,7 @@ function Faq() {
     <div className="absolute top-20% left-1/2 transform -translate-x-1/2 bg-white min-w-310 md:min-w-420 w-1/2 900:w-2/5  xl:w-2/5 p-8 shadow-2xl rounded-lg">
       <div className="flex items-center w-48% 900:w-1/4 justify-between">
         <img src={iconStar} alt="icon-star"></img>
-        <h1 className="font-bold text-dark-purple text-2xl sm:text-3xl md:text-6xl">FAQs</h1>
+        <h1 className="font-bold text-dark-purple text-2xl sm:text-3xl md:text-5xl">FAQs</h1>
       </div>
 
       <Items
