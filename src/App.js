@@ -7,8 +7,8 @@ import { useState } from 'react';
 export default function App() {
   return (
     <div className="flex flex-col h-screen font-work-sans">
-      <div className="bg-pattern border h-2/5 border-red-950"></div>
-      <div className="text-blue-900 border h-3/5 border-green-950 bg-light-pink"></div>
+      <div className="bg-pattern h-2/5 border-red-950"></div>
+      <div className="bg-light-pink"></div>
       <Faq />
     </div>
   );
@@ -18,10 +18,10 @@ function Faq() {
   const [curOpen, setCurOpen] = useState(null);
 
   return (
-    <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 bg-white w-2/5 p-8 shadow-2xl rounded-lg">
-      <div className="flex items-center0 w-1/3 justify-between">
+    <div className="absolute top-20% left-1/2 transform -translate-x-1/2 bg-white min-w-310 md:min-w-420 w-1/2 900:w-2/5  xl:w-2/5 p-8 shadow-2xl rounded-lg">
+      <div className="flex items-center w-48% 900:w-1/4 justify-between">
         <img src={iconStar} alt="icon-star"></img>
-        <h1 className="font-bold text-dark-purple text-5xl">FAQs</h1>
+        <h1 className="font-bold text-dark-purple text-2xl sm:text-3xl md:text-6xl">FAQs</h1>
       </div>
 
       <Items
@@ -84,17 +84,17 @@ function Items({ index, curOpen, onCurOpen, text, children }) {
   const isOpen = curOpen === index;
 
   function handleIsOpen() {
-    onCurOpen(index);
+    onCurOpen(index === curOpen ? null : index);
   }
 
   return (
     <div>
       <section className="border-b py-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-dark-purple hover:text-bright-purple cursor-pointer text-1xl font-semibold">
+          <h3 className="basis-11/12 text-dark-purple hover:text-bright-purple cursor-pointer 900:text-base text-xs font-semibold">
             {text}
           </h3>
-          <div onClick={handleIsOpen}>
+          <div className='basis-1/12' onClick={handleIsOpen}>
             {isOpen ? (
               <img src={iconMinus} alt="icon-minus"></img>
             ) : (

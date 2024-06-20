@@ -4,16 +4,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      '900': '900px',
+    },
     extend: {
       backgroundImage: theme => ({
         'pattern': "url(./assets/images/background-pattern-desktop.svg)"
       }),
-      height: {
-        '2/5': '40%',
-        '3/5': '60%',
-      },
       width: {
         '30': '30%',
+        '48%': '48%',
       },
       backgroundColor: {
         'light-pink': 'hsl(275, 100%, 97%)',
@@ -28,7 +28,14 @@ module.exports = {
       },
       fontFamily: {
         'work-sans': ['"Work Sans"', 'sans-serif'],
-      }
+      },
+      minWidth: {
+        '420': '420px',
+        '310': '310px',
+      },
+      inset: {
+        '20%': '20%',
+      },
     },
   },
   plugins: [],
