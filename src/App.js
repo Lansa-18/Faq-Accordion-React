@@ -15,6 +15,8 @@ export default function App() {
 }
 
 function Faq() {
+  const [curOpen, setCurOpen] = useState(null);
+
   return (
     <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 bg-white w-2/5 p-8 shadow-2xl rounded-lg">
       <div className="flex items-center0 w-1/3 justify-between">
@@ -22,7 +24,12 @@ function Faq() {
         <h1 className="font-bold text-dark-purple text-5xl">FAQs</h1>
       </div>
 
-      <Items text="What is Frontend Mentor, and how will it help me?">
+      <Items
+        index={1}
+        curOpen={curOpen}
+        onCurOpen={setCurOpen}
+        text="What is Frontend Mentor, and how will it help me?"
+      >
         <p className="text-grayish-purple text-sm font-normal pt-4">
           Frontend Mentor offers realistic coding challenges to help developers
           improve their frontend coding skills with projects in HTML, CSS and
@@ -31,7 +38,12 @@ function Faq() {
         </p>
       </Items>
 
-      <Items text="Is Frontend Mentor free?">
+      <Items
+        index={2}
+        curOpen={curOpen}
+        onCurOpen={setCurOpen}
+        text="Is Frontend Mentor free?"
+      >
         <p className="text-grayish-purple text-sm font-normal pt-4">
           Yes, Frontend Mentor offers both free and premium coding challenges,
           with the free option providing access to a range of projects suitable
@@ -39,7 +51,12 @@ function Faq() {
         </p>
       </Items>
 
-      <Items text="Can i use Frontend Mentor projects in my portfolio?">
+      <Items
+        index={3}
+        curOpen={curOpen}
+        onCurOpen={setCurOpen}
+        text="Can i use Frontend Mentor projects in my portfolio?"
+      >
         <p className="text-grayish-purple text-sm font-normal pt-4">
           Yes, you can use projects completed on Frontend Mentor in your
           portfolio. It's an excellent way to showcase your skills to potential
@@ -47,7 +64,12 @@ function Faq() {
         </p>
       </Items>
 
-      <Items text="How can i get help if i'm stuck on a challenge?">
+      <Items
+        index={4}
+        curOpen={curOpen}
+        onCurOpen={setCurOpen}
+        text="How can i get help if i'm stuck on a challenge?"
+      >
         <p className="text-grayish-purple text-sm font-normal pt-4">
           The best place to get help is inside Frontend Mentor's Discord
           community. There's a help channel where you can ask questions and seek
@@ -58,19 +80,20 @@ function Faq() {
   );
 }
 
-function Items({ text, children }) {
-  const [isOpen, setIsOpen] = useState(false);
+function Items({ index, curOpen, onCurOpen, text, children }) {
+  const isOpen = curOpen === index;
 
   function handleIsOpen() {
-    // setIsOpen(false);
-    setIsOpen(isOpen => !isOpen);
+    onCurOpen(index);
   }
 
   return (
     <div>
       <section className="border-b py-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-dark-purple hover:text-bright-purple cursor-pointer text-1xl font-semibold">{text}</h3>
+          <h3 className="text-dark-purple hover:text-bright-purple cursor-pointer text-1xl font-semibold">
+            {text}
+          </h3>
           <div onClick={handleIsOpen}>
             {isOpen ? (
               <img src={iconMinus} alt="icon-minus"></img>
